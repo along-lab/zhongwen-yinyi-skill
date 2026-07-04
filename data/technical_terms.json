@@ -96,6 +96,12 @@
     "meaning": "浏览器"
   },
   {
+    "term": "Cloudflare",
+    "kind": "word",
+    "homophone": "克劳德弗莱尔",
+    "meaning": "云代理服务"
+  },
+  {
     "term": "Client",
     "kind": "word",
     "homophone": "克莱恩特",
@@ -504,6 +510,12 @@
     "meaning": "悬浮提示"
   },
   {
+    "term": "Tunnel",
+    "kind": "word",
+    "homophone": "塔呢尔",
+    "meaning": "隧道"
+  },
+  {
     "term": "TypeScript",
     "kind": "word",
     "homophone": "泰普斯克瑞普特",
@@ -526,6 +538,12 @@
     "kind": "word",
     "homophone": "维优",
     "meaning": "前端界面框架"
+  },
+  {
+    "term": "WebUI",
+    "kind": "word",
+    "homophone": "韦布-尤艾",
+    "meaning": "网页界面"
   },
   {
     "term": "Workflow",

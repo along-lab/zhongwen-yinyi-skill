@@ -65,6 +65,43 @@ def test_skips_already_annotated_terms() -> None:
     assert output == "Skill（谐音:斯ki尔/技能） calls Skill."
 
 
+def test_cloudflare_tunnel_terms_are_curated() -> None:
+    terms = translator.load_terms()
+
+    output = translator.annotate_text("Cloudflare Tunnel is not WebUI.", terms)
+
+    assert_contains(output, "Cloudflare（谐音:克劳德弗莱尔/云代理服务）")
+    assert_contains(output, "Tunnel（谐音:塔呢尔/隧道）")
+    assert_contains(output, "WebUI（谐音:韦布-尤艾/网页界面）")
+    assert "널" not in output
+
+
+def test_load_terms_rejects_foreign_phonetic_scripts() -> None:
+    with tempfile.TemporaryDirectory() as tmpdir:
+        glossary = Path(tmpdir) / "terms.json"
+        glossary.write_text(
+            json.dumps(
+                [
+                    {
+                        "term": "Tunnel",
+                        "kind": "word",
+                        "homophone": "塔널",
+                        "meaning": "隧道",
+                    }
+                ],
+                ensure_ascii=False,
+            ),
+            encoding="utf-8",
+        )
+
+        try:
+            translator.load_terms(glossary)
+        except ValueError as exc:
+            assert "forbidden phonetic script" in str(exc)
+        else:
+            raise AssertionError("Expected foreign phonetic script to be rejected")
+
+
 def test_update_term_writes_glossary_and_log() -> None:
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
@@ -113,13 +150,62 @@ def test_update_term_writes_glossary_and_log() -> None:
         assert record["new_homophone"] == "斯ki尔"
 
 
+def test_update_term_rejects_foreign_phonetic_scripts() -> None:
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir)
+        glossary = tmp / "terms.json"
+        log = tmp / "corrections.jsonl"
+        glossary.write_text(
+            json.dumps(
+                [
+                    {
+                        "term": "Tunnel",
+                        "kind": "word",
+                        "homophone": "塔呢尔",
+                        "meaning": "隧道",
+                    }
+                ],
+                ensure_ascii=False,
+            ),
+            encoding="utf-8",
+        )
+
+        update_script = SCRIPT.with_name("update_term.py")
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(update_script),
+                "--term",
+                "Tunnel",
+                "--homophone",
+                "塔널",
+                "--meaning",
+                "隧道",
+                "--glossary",
+                str(glossary),
+                "--log",
+                str(log),
+            ],
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+
+        assert result.returncode != 0
+        assert "forbidden phonetic script" in result.stderr
+        assert json.loads(glossary.read_text(encoding="utf-8"))[0]["homophone"] == "塔呢尔"
+        assert not log.exists()
+
+
 def main() -> int:
     tests = [
         test_annotates_first_occurrence_only,
         test_acronym_uses_meaning_only,
         test_skips_code_spans,
         test_skips_already_annotated_terms,
+        test_cloudflare_tunnel_terms_are_curated,
+        test_load_terms_rejects_foreign_phonetic_scripts,
         test_update_term_writes_glossary_and_log,
+        test_update_term_rejects_foreign_phonetic_scripts,
     ]
     for test in tests:
         test()

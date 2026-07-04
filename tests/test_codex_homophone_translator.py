@@ -50,3 +50,14 @@ def test_skips_already_annotated_terms():
     output = translator.annotate_text("Skill（谐音:斯ki尔/技能） calls Skill.", terms)
 
     assert output == "Skill（谐音:斯ki尔/技能） calls Skill."
+
+
+def test_cloudflare_tunnel_terms_are_curated():
+    terms = translator.load_terms()
+
+    output = translator.annotate_text("Cloudflare Tunnel is not WebUI.", terms)
+
+    assert "Cloudflare（谐音:克劳德弗莱尔/云代理服务）" in output
+    assert "Tunnel（谐音:塔呢尔/隧道）" in output
+    assert "WebUI（谐音:韦布-尤艾/网页界面）" in output
+    assert "널" not in output

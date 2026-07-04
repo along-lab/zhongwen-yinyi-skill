@@ -20,6 +20,18 @@ from typing import Iterable
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GLOSSARY = ROOT / "data" / "technical_terms.json"
 MASK_RE = re.compile(r"(```[\s\S]*?```|`[^`\n]*`)")
+FORBIDDEN_HOMOPHONE_SCRIPT_RE = re.compile(
+    r"[\u1100-\u11ff\u3040-\u30ff\u3130-\u318f\u31f0-\u31ff\uac00-\ud7af]"
+)
+
+
+def validate_homophone(value: str, *, path: Path, index: int) -> None:
+    match = FORBIDDEN_HOMOPHONE_SCRIPT_RE.search(value)
+    if match:
+        char = match.group(0)
+        raise ValueError(
+            f"{path} item {index} homophone contains forbidden phonetic script: {char!r}"
+        )
 
 
 @dataclass(frozen=True)
@@ -62,6 +74,8 @@ def load_terms(path: Path = DEFAULT_GLOSSARY) -> list[Term]:
             raise ValueError(f"{path} item {index} has unsupported kind: {kind}")
         if kind != "acronym" and not homophone:
             raise ValueError(f"{path} item {index} must include homophone")
+        if kind != "acronym":
+            validate_homophone(homophone, path=path, index=index)
         terms.append(Term(term=term, kind=kind, meaning=meaning, homophone=homophone))
 
     return sorted(terms, key=lambda item: (-len(item.term), item.term.casefold()))

@@ -58,6 +58,8 @@ If the current thread is using an installed cached plugin, also tell the user th
 
 - Prefer the curated glossary over guessing.
 - Keep the pronunciation readable for non-English users.
+- Homophone text must use Chinese characters, with only small ASCII letter helpers when the user explicitly prefers them, such as `斯ki尔`.
+- Never use Korean Hangul, Japanese kana, Cyrillic, or other non-Chinese phonetic scripts in homophone text.
 - Do not use crude or negative Chinese characters as default pronunciation hints.
 - Skip low-confidence unknown words until they are added to the glossary.
 - When the user explicitly corrects a pronunciation, treat the correction as accepted data and write it into the glossary.

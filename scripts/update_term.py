@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -13,6 +14,16 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GLOSSARY = ROOT / "data" / "technical_terms.json"
 DEFAULT_LOG = ROOT / "data" / "corrections.jsonl"
+FORBIDDEN_HOMOPHONE_SCRIPT_RE = re.compile(
+    r"[\u1100-\u11ff\u3040-\u30ff\u3130-\u318f\u31f0-\u31ff\uac00-\ud7af]"
+)
+
+
+def validate_homophone(value: str) -> None:
+    match = FORBIDDEN_HOMOPHONE_SCRIPT_RE.search(value)
+    if match:
+        char = match.group(0)
+        raise ValueError(f"Homophone contains forbidden phonetic script: {char!r}")
 
 
 def load_glossary(path: Path) -> list[dict[str, Any]]:
@@ -134,6 +145,7 @@ def main() -> int:
     log_path = Path(args.log).expanduser().resolve()
 
     entries = load_glossary(glossary_path)
+    validate_homophone(args.homophone.strip())
     next_entries, old_entry, new_entry = update_entry(
         entries,
         term=args.term.strip(),
