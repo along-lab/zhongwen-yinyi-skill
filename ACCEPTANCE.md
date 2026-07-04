@@ -10,16 +10,18 @@ The plugin scaffold and local annotation command are ready for trial use.
 
 ## Verified
 
-- Behavior tests: `python3 codex-homophone-translator/tests/run_tests.py`
+- Behavior tests: `python3 tests/run_tests.py`
   - Result: 5 tests passed.
-- Syntax check: `python3 -m py_compile codex-homophone-translator/scripts/codex_homophone_translator.py codex-homophone-translator/tests/run_tests.py codex-homophone-translator/tests/test_codex_homophone_translator.py`
+- Syntax check: `python3 -m py_compile scripts/codex_homophone_translator.py scripts/install_for_codex.py scripts/update_term.py tests/run_tests.py tests/test_codex_homophone_translator.py`
   - Result: exit 0.
-- Plugin manifest validation: `validate_plugin.py codex-homophone-translator`
+- Plugin manifest validation: `validate_plugin.py zhongwen-yinyi-skill`
   - Result: plugin validation passed.
-- Local Codex install: `codex plugin add codex-homophone-translator@personal`
+- Local Codex install: `codex plugin add zhongwen-yinyi-skill@personal`
   - Result: installed to local Codex plugin cache.
 - Plugin list: `codex plugin list`
-  - Result: `codex-homophone-translator@personal` is `installed, enabled` at version `0.1.0+codex.20260704130831`.
+  - Result: `zhongwen-yinyi-skill@personal` is `installed, enabled`.
+- One-command installer: `python3 scripts/install_for_codex.py --skip-codex-add`
+  - Result: copied plugin source to `~/plugins/zhongwen-yinyi-skill` and updated the personal marketplace file.
 - Display name:
   - Result: plugin interface display name is `中文音译技能`.
 - Correction flow: `python3 scripts/update_term.py --term Skill --homophone 斯ki尔 --meaning 技能`

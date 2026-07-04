@@ -48,5 +48,5 @@ This updates `data/technical_terms.json` and appends a correction record to `dat
 
 ```bash
 python3 tests/run_tests.py
-python3 -m py_compile scripts/codex_homophone_translator.py scripts/update_term.py tests/run_tests.py tests/test_codex_homophone_translator.py
+python3 -m py_compile scripts/codex_homophone_translator.py scripts/install_for_codex.py scripts/update_term.py tests/run_tests.py tests/test_codex_homophone_translator.py
 ```

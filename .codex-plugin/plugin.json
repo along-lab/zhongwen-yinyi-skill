@@ -1,9 +1,9 @@
 {
-  "name": "codex-homophone-translator",
+  "name": "zhongwen-yinyi-skill",
   "version": "0.1.0",
   "description": "中文音译技能：为 Codex 回复里的英文技术词添加中文谐音和中文解释。",
   "author": {
-    "name": "Local developer"
+    "name": "15718483417-maker"
   },
   "skills": "./skills/",
   "interface": {

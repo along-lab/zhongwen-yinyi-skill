@@ -12,6 +12,29 @@ Skill（谐音:斯ki尔/技能） can call a Plugin（谐音:普拉格因/插件
 
 Many Chinese users can use AI coding agents well, but English technical terms can still be a reading barrier. This project aims to make those terms easier to read aloud and understand without turning every reply into a full English lesson.
 
+## One-Command Install For Codex
+
+Clone this repository and run:
+
+```bash
+python3 scripts/install_for_codex.py
+```
+
+The installer will:
+
+- copy this plugin to `~/plugins/zhongwen-yinyi-skill`;
+- create or update `~/.agents/plugins/marketplace.json`;
+- run `codex plugin add zhongwen-yinyi-skill@personal` when the Codex CLI is available;
+- append a global `~/.codex/AGENTS.md` rule so new Codex threads use 中文音译技能 by default.
+
+Then open a new Codex thread.
+
+If you only want to install the plugin and do not want to write the global Agent rule:
+
+```bash
+python3 scripts/install_for_codex.py --skip-global-rule
+```
+
 ## Try It
 
 ```bash
@@ -29,6 +52,7 @@ Skill（谐音:斯ki尔/技能） can call a Plugin（谐音:普拉格因/插件
 - `data/technical_terms.json`: curated technical glossary.
 - `data/corrections.jsonl`: correction history for user-approved pronunciation changes.
 - `scripts/codex_homophone_translator.py`: local annotation command.
+- `scripts/install_for_codex.py`: one-command local installer for Codex.
 - `scripts/update_term.py`: correction command for user-approved pronunciation changes.
 - `skills/homophone-annotator/SKILL.md`: 中文音译技能 instructions.
 - `tests/test_codex_homophone_translator.py`: MVP behavior tests.
@@ -70,7 +94,7 @@ The command updates `data/technical_terms.json` and records the change in `data/
 
 ```bash
 python3 tests/run_tests.py
-python3 -m py_compile scripts/codex_homophone_translator.py scripts/update_term.py tests/run_tests.py tests/test_codex_homophone_translator.py
+python3 -m py_compile scripts/codex_homophone_translator.py scripts/install_for_codex.py scripts/update_term.py tests/run_tests.py tests/test_codex_homophone_translator.py
 ```
 
 ## License
