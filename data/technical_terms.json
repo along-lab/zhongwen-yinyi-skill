@@ -1,0 +1,616 @@
+[
+  {
+    "term": "Code Review",
+    "kind": "phrase",
+    "homophone": "扣德瑞维优",
+    "meaning": "代码评审"
+  },
+  {
+    "term": "Pull Request",
+    "kind": "phrase",
+    "homophone": "普尔瑞奎斯特",
+    "meaning": "代码合并请求"
+  },
+  {
+    "term": "User Experience",
+    "kind": "phrase",
+    "homophone": "优泽伊克斯皮瑞恩斯",
+    "meaning": "用户体验"
+  },
+  {
+    "term": "User Interface",
+    "kind": "phrase",
+    "homophone": "优泽因特费斯",
+    "meaning": "用户界面"
+  },
+  {
+    "term": "Vibe Coding",
+    "kind": "phrase",
+    "homophone": "外布扣丁",
+    "meaning": "用感觉和智能体协作写代码"
+  },
+  {
+    "term": "Agent",
+    "kind": "word",
+    "homophone": "诶金特",
+    "meaning": "智能体"
+  },
+  {
+    "term": "Auth",
+    "kind": "word",
+    "homophone": "奥思",
+    "meaning": "身份验证"
+  },
+  {
+    "term": "Branch",
+    "kind": "word",
+    "homophone": "布兰奇",
+    "meaning": "代码分支"
+  },
+  {
+    "term": "Browser",
+    "kind": "word",
+    "homophone": "布劳泽尔",
+    "meaning": "浏览器"
+  },
+  {
+    "term": "Bug",
+    "kind": "word",
+    "homophone": "巴格",
+    "meaning": "程序错误"
+  },
+  {
+    "term": "Build",
+    "kind": "word",
+    "homophone": "比尔德",
+    "meaning": "构建"
+  },
+  {
+    "term": "Button",
+    "kind": "word",
+    "homophone": "巴腾",
+    "meaning": "按钮"
+  },
+  {
+    "term": "Cache",
+    "kind": "word",
+    "homophone": "凯仕",
+    "meaning": "缓存"
+  },
+  {
+    "term": "Card",
+    "kind": "word",
+    "homophone": "卡德",
+    "meaning": "卡片"
+  },
+  {
+    "term": "Checkbox",
+    "kind": "word",
+    "homophone": "切克博克斯",
+    "meaning": "复选框"
+  },
+  {
+    "term": "Chrome",
+    "kind": "word",
+    "homophone": "克罗姆",
+    "meaning": "浏览器"
+  },
+  {
+    "term": "Client",
+    "kind": "word",
+    "homophone": "克莱恩特",
+    "meaning": "客户端"
+  },
+  {
+    "term": "Codex",
+    "kind": "word",
+    "homophone": "扣戴克斯",
+    "meaning": "智能体编程工具"
+  },
+  {
+    "term": "Command",
+    "kind": "word",
+    "homophone": "克曼德",
+    "meaning": "命令"
+  },
+  {
+    "term": "Commit",
+    "kind": "word",
+    "homophone": "克米特",
+    "meaning": "提交记录"
+  },
+  {
+    "term": "Component",
+    "kind": "word",
+    "homophone": "康坡嫩特",
+    "meaning": "组件"
+  },
+  {
+    "term": "Config",
+    "kind": "word",
+    "homophone": "康菲格",
+    "meaning": "配置"
+  },
+  {
+    "term": "Context",
+    "kind": "word",
+    "homophone": "康泰克斯特",
+    "meaning": "上下文"
+  },
+  {
+    "term": "Cookie",
+    "kind": "word",
+    "homophone": "库基",
+    "meaning": "浏览器小型存储数据"
+  },
+  {
+    "term": "Dashboard",
+    "kind": "word",
+    "homophone": "达什博德",
+    "meaning": "数据看板"
+  },
+  {
+    "term": "Database",
+    "kind": "word",
+    "homophone": "戴塔贝斯",
+    "meaning": "数据库"
+  },
+  {
+    "term": "Debug",
+    "kind": "word",
+    "homophone": "迪巴格",
+    "meaning": "调试"
+  },
+  {
+    "term": "Dependency",
+    "kind": "word",
+    "homophone": "迪潘登西",
+    "meaning": "依赖包"
+  },
+  {
+    "term": "Deploy",
+    "kind": "word",
+    "homophone": "迪普洛伊",
+    "meaning": "部署"
+  },
+  {
+    "term": "Docker",
+    "kind": "word",
+    "homophone": "多克尔",
+    "meaning": "容器工具"
+  },
+  {
+    "term": "Dropdown",
+    "kind": "word",
+    "homophone": "卓普当",
+    "meaning": "下拉菜单"
+  },
+  {
+    "term": "Endpoint",
+    "kind": "word",
+    "homophone": "恩德泡因特",
+    "meaning": "接口地址"
+  },
+  {
+    "term": "Feature",
+    "kind": "word",
+    "homophone": "菲彻",
+    "meaning": "功能"
+  },
+  {
+    "term": "Firebase",
+    "kind": "word",
+    "homophone": "法尔贝斯",
+    "meaning": "后端云服务"
+  },
+  {
+    "term": "Form",
+    "kind": "word",
+    "homophone": "佛姆",
+    "meaning": "表单"
+  },
+  {
+    "term": "Format",
+    "kind": "word",
+    "homophone": "佛麦特",
+    "meaning": "格式化"
+  },
+  {
+    "term": "Git",
+    "kind": "word",
+    "homophone": "给特",
+    "meaning": "版本管理工具"
+  },
+  {
+    "term": "GitHub",
+    "kind": "word",
+    "homophone": "给特哈布",
+    "meaning": "代码托管平台"
+  },
+  {
+    "term": "Hook",
+    "kind": "word",
+    "homophone": "胡克",
+    "meaning": "钩子机制"
+  },
+  {
+    "term": "Input",
+    "kind": "word",
+    "homophone": "因普特",
+    "meaning": "输入框"
+  },
+  {
+    "term": "JavaScript",
+    "kind": "word",
+    "homophone": "爪哇斯克瑞普特",
+    "meaning": "网页脚本语言"
+  },
+  {
+    "term": "Layout",
+    "kind": "word",
+    "homophone": "雷奥特",
+    "meaning": "布局"
+  },
+  {
+    "term": "Lint",
+    "kind": "word",
+    "homophone": "林特",
+    "meaning": "代码规范检查"
+  },
+  {
+    "term": "Menu",
+    "kind": "word",
+    "homophone": "麦纽",
+    "meaning": "菜单"
+  },
+  {
+    "term": "Merge",
+    "kind": "word",
+    "homophone": "默吉",
+    "meaning": "合并"
+  },
+  {
+    "term": "Middleware",
+    "kind": "word",
+    "homophone": "米德尔威尔",
+    "meaning": "中间件"
+  },
+  {
+    "term": "Modal",
+    "kind": "word",
+    "homophone": "莫德尔",
+    "meaning": "弹窗"
+  },
+  {
+    "term": "Model",
+    "kind": "word",
+    "homophone": "莫德尔",
+    "meaning": "模型"
+  },
+  {
+    "term": "Module",
+    "kind": "word",
+    "homophone": "莫久尔",
+    "meaning": "模块"
+  },
+  {
+    "term": "Netlify",
+    "kind": "word",
+    "homophone": "奈特利法伊",
+    "meaning": "网站部署平台"
+  },
+  {
+    "term": "Next",
+    "kind": "word",
+    "homophone": "奈克斯特",
+    "meaning": "React 应用框架"
+  },
+  {
+    "term": "Node",
+    "kind": "word",
+    "homophone": "诺德",
+    "meaning": "JavaScript 运行环境"
+  },
+  {
+    "term": "Package",
+    "kind": "word",
+    "homophone": "帕克基",
+    "meaning": "软件包"
+  },
+  {
+    "term": "Plugin",
+    "kind": "word",
+    "homophone": "普拉格因",
+    "meaning": "插件"
+  },
+  {
+    "term": "Prompt",
+    "kind": "word",
+    "homophone": "普朗普特",
+    "meaning": "提示词"
+  },
+  {
+    "term": "Props",
+    "kind": "word",
+    "homophone": "普若普斯",
+    "meaning": "组件传入参数"
+  },
+  {
+    "term": "Python",
+    "kind": "word",
+    "homophone": "派森",
+    "meaning": "编程语言"
+  },
+  {
+    "term": "React",
+    "kind": "word",
+    "homophone": "瑞艾克特",
+    "meaning": "前端界面框架"
+  },
+  {
+    "term": "Redis",
+    "kind": "word",
+    "homophone": "瑞迪斯",
+    "meaning": "内存数据库"
+  },
+  {
+    "term": "Regex",
+    "kind": "word",
+    "homophone": "瑞杰克斯",
+    "meaning": "正则表达式"
+  },
+  {
+    "term": "Release",
+    "kind": "word",
+    "homophone": "瑞利斯",
+    "meaning": "发布版本"
+  },
+  {
+    "term": "Request",
+    "kind": "word",
+    "homophone": "瑞奎斯特",
+    "meaning": "请求"
+  },
+  {
+    "term": "Response",
+    "kind": "word",
+    "homophone": "瑞斯庞斯",
+    "meaning": "响应"
+  },
+  {
+    "term": "Route",
+    "kind": "word",
+    "homophone": "路特",
+    "meaning": "路由"
+  },
+  {
+    "term": "Router",
+    "kind": "word",
+    "homophone": "路特尔",
+    "meaning": "路由器或路由模块"
+  },
+  {
+    "term": "Runtime",
+    "kind": "word",
+    "homophone": "润泰姆",
+    "meaning": "运行时"
+  },
+  {
+    "term": "Sandbox",
+    "kind": "word",
+    "homophone": "桑德博克斯",
+    "meaning": "沙盒"
+  },
+  {
+    "term": "Schema",
+    "kind": "word",
+    "homophone": "斯基马",
+    "meaning": "数据结构定义"
+  },
+  {
+    "term": "Script",
+    "kind": "word",
+    "homophone": "斯克瑞普特",
+    "meaning": "脚本"
+  },
+  {
+    "term": "Server",
+    "kind": "word",
+    "homophone": "瑟沃尔",
+    "meaning": "服务器"
+  },
+  {
+    "term": "Session",
+    "kind": "word",
+    "homophone": "赛申",
+    "meaning": "会话"
+  },
+  {
+    "term": "Shell",
+    "kind": "word",
+    "homophone": "歇尔",
+    "meaning": "命令行外壳"
+  },
+  {
+    "term": "Skill",
+    "kind": "word",
+    "homophone": "斯ki尔",
+    "meaning": "技能"
+  },
+  {
+    "term": "Slider",
+    "kind": "word",
+    "homophone": "斯莱德尔",
+    "meaning": "滑块"
+  },
+  {
+    "term": "State",
+    "kind": "word",
+    "homophone": "斯泰特",
+    "meaning": "状态"
+  },
+  {
+    "term": "Supabase",
+    "kind": "word",
+    "homophone": "苏帕贝斯",
+    "meaning": "后端云服务"
+  },
+  {
+    "term": "Tab",
+    "kind": "word",
+    "homophone": "泰布",
+    "meaning": "标签页"
+  },
+  {
+    "term": "Tailwind",
+    "kind": "word",
+    "homophone": "泰尔温德",
+    "meaning": "样式工具库"
+  },
+  {
+    "term": "Terminal",
+    "kind": "word",
+    "homophone": "特米诺",
+    "meaning": "终端"
+  },
+  {
+    "term": "Test",
+    "kind": "word",
+    "homophone": "泰斯特",
+    "meaning": "测试"
+  },
+  {
+    "term": "Toast",
+    "kind": "word",
+    "homophone": "托斯特",
+    "meaning": "轻提示"
+  },
+  {
+    "term": "Toggle",
+    "kind": "word",
+    "homophone": "套格尔",
+    "meaning": "开关控件"
+  },
+  {
+    "term": "Token",
+    "kind": "word",
+    "homophone": "偷肯",
+    "meaning": "令牌或计量单位"
+  },
+  {
+    "term": "Tooltip",
+    "kind": "word",
+    "homophone": "图尔提普",
+    "meaning": "悬浮提示"
+  },
+  {
+    "term": "TypeScript",
+    "kind": "word",
+    "homophone": "泰普斯克瑞普特",
+    "meaning": "带类型的 JavaScript 语言"
+  },
+  {
+    "term": "Vercel",
+    "kind": "word",
+    "homophone": "沃瑟尔",
+    "meaning": "网站部署平台"
+  },
+  {
+    "term": "Vite",
+    "kind": "word",
+    "homophone": "维特",
+    "meaning": "前端构建工具"
+  },
+  {
+    "term": "Vue",
+    "kind": "word",
+    "homophone": "维优",
+    "meaning": "前端界面框架"
+  },
+  {
+    "term": "Workflow",
+    "kind": "word",
+    "homophone": "沃克弗洛",
+    "meaning": "工作流"
+  },
+  {
+    "term": "AI",
+    "kind": "acronym",
+    "meaning": "人工智能"
+  },
+  {
+    "term": "API",
+    "kind": "acronym",
+    "meaning": "接口"
+  },
+  {
+    "term": "CLI",
+    "kind": "acronym",
+    "meaning": "命令行工具"
+  },
+  {
+    "term": "JSON",
+    "kind": "acronym",
+    "meaning": "数据交换格式"
+  },
+  {
+    "term": "JSONL",
+    "kind": "acronym",
+    "meaning": "一行一个 JSON 的数据格式"
+  },
+  {
+    "term": "LLM",
+    "kind": "acronym",
+    "meaning": "大语言模型"
+  },
+  {
+    "term": "MCP",
+    "kind": "acronym",
+    "meaning": "模型上下文协议"
+  },
+  {
+    "term": "MVP",
+    "kind": "acronym",
+    "meaning": "最小可用版本"
+  },
+  {
+    "term": "PoC",
+    "kind": "acronym",
+    "meaning": "可行性验证原型"
+  },
+  {
+    "term": "PR",
+    "kind": "acronym",
+    "meaning": "代码合并请求"
+  },
+  {
+    "term": "SDK",
+    "kind": "acronym",
+    "meaning": "开发工具包"
+  },
+  {
+    "term": "SQL",
+    "kind": "acronym",
+    "meaning": "数据库查询语言"
+  },
+  {
+    "term": "TOML",
+    "kind": "acronym",
+    "meaning": "配置文件格式"
+  },
+  {
+    "term": "UI",
+    "kind": "acronym",
+    "meaning": "用户界面"
+  },
+  {
+    "term": "UX",
+    "kind": "acronym",
+    "meaning": "用户体验"
+  },
+  {
+    "term": "YAML",
+    "kind": "acronym",
+    "meaning": "配置文件格式"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "codex-homophone-translator",
+  "version": "0.1.0",
+  "description": "中文音译技能：为 Codex 回复里的英文技术词添加中文谐音和中文解释。",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "中文音译技能",
+    "shortDescription": "给英文技术词添加中文谐音和解释。",
+    "longDescription": "中文音译技能帮助中文用户阅读 Codex 回复中的英文技术词，会基于人工校准词库添加中文近似发音和中文解释，并支持用户明确纠错后写入词库。",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "defaultPrompt": [
+      "使用中文音译技能注释这段 Codex 回复。",
+      "把英文技术词加上中文谐音和中文解释。",
+      "查看当前中文音译词库。"
+    ]
+  }
+}
